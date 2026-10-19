@@ -14,8 +14,8 @@ from kivy.uix.label import Label
 
 # ============ CONFIGURE AQUI ============
 HOSTS = [
-    ("Prospero Manager", "http://localhost:7070/"),   # {ip} = IP do PS5
-    ("Payload Manager", "http://localhost:8084/"),
+    ("Prospero Manager", "http://{ip}:7070/"),
+    ("Payload Manager", "http://{ip}:8084/"),
 ]
 FALLBACK_TCP_PORTS = [9021, 9020, 9090, 9295]
 # ========================================
