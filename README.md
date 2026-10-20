@@ -1,17 +1,18 @@
-# PS5 App
+# PS5 Hub para Android
 
-Aplicativo Android Kivy para localizar o PS5 na rede local e abrir os serviços:
+Este projeto cria um APK Android que abre https://jhonnywolf.github.io/ps5hub/ em uma WebView, com JavaScript, armazenamento local, seletor de arquivos e downloads.
 
-- Prospero Manager: `http://IP_DO_PS5:7070/`
-- Payload Manager: `http://IP_DO_PS5:8084/`
+## Gerar o APK pelo GitHub Actions
 
-## Gerar APK no GitHub
+1. Crie um repositório novo no GitHub (por exemplo `ps5hub-android`).
+2. Extraia este ZIP e envie **o conteúdo** para a raiz do repositório.
+3. Abra a aba **Actions** e habilite workflows, se o GitHub solicitar.
+4. Entre em **Build PS5 Hub APK** e clique em **Run workflow** (ou faça um push na branch `main`/`master`).
+5. Quando terminar com sucesso, abra a execução e baixe o artefato **PS5Hub-debug-apk**.
+6. Extraia o ZIP do artefato e instale `app-debug.apk` no Android.
 
-1. Envie estes arquivos ao repositório.
-2. Abra **Actions**.
-3. Selecione **Build APK** e execute **Run workflow**, ou faça um commit para disparar automaticamente.
-4. Quando terminar com sucesso, abra a execução e baixe o artefato `ps5app-apk`.
-
-O workflow usa `actions/checkout@v5` e `actions/setup-python@v6` para evitar as versões antigas de runtime Node.js.
-
-Nota: a busca automática depende de o PS5 e o celular estarem na mesma rede/sub-rede e de o roteador permitir tráfego local. Os serviços nas portas 7070 e 8084 precisam estar ativos no PS5.
+## Observações
+- É um APK de depuração, não assinado para publicação na Play Store.
+- O aplicativo precisa de internet para carregar o site.
+- O conteúdo do site é carregado do endereço online; não é uma cópia offline do repositório.
+- Revise o conteúdo do site e só use payloads/arquivos que você confia.
